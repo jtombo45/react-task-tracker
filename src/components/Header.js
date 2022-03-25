@@ -10,7 +10,7 @@ const Header = ({title}) => {
 }
 
 Header.defaultProps = {
-    title: 'Penis Tracker',
+    title: 'Task Tracker',
 }
 
 export default Header
