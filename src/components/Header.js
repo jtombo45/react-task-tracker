@@ -8,9 +8,7 @@ const Header = ({title}) => {
         <h1>
             {title}
         </h1>
-        <Button color='green' text='Hello'/>
-        <Button color='blue' text='Hello 2'/>
-        <Button color='red' text='Hello 3'/>
+        <Button color='green' text='Add'/>
         
     </header>
   )
