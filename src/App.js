@@ -7,14 +7,11 @@ function App() {
  const x = false
  return (
    <div className="container">
-     <Header title='Hello'/>
+     <Header/>
    </div>
  );
 }
 
-Header.defaultProps = {
-  title: 'Task Tracker',
-}
 
 
 export default App;
