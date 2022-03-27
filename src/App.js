@@ -28,13 +28,18 @@ function App() {
     }
   ])
 
- const name = 'Jude'
- const x = false
+ //const name = 'Jude'
+ //const x = false
+
+ //Delete Task: this function will be used as prop to delete tasks, it will be passed through the Tasks component and Task component
+ const deleteTask = (id) => {
+   setTasks(tasks.filter((task) => task.id !== id))
+ }
 
  return (
    <div className="container">
      <Header/>
-     <Tasks tasks={tasks}/>
+     {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask}/> : 'No Tasks to Show'}
    </div>
  );
 }
