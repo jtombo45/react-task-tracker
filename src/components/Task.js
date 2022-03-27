@@ -3,9 +3,10 @@
 //We use context API or reduxn or in our case a prop
 import {FaTimes} from 'react-icons/fa'
 
-const Task = ({task, onDelete}) => {
+const Task = ({task, onDelete, onToggle}) => {
   return (
-    <div className="task">
+    //onDoubleClick doesn't work when using inspector tools
+    <div className="task" onDoubleClick={() => onToggle(task.id)}>
         <h3>
             {task.text} <FaTimes style={{color: 'red', cursor: 'pointer'}} onClick={() => onDelete(task.id)}/>
         </h3>
