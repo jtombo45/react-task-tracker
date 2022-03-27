@@ -1,11 +1,14 @@
-
+import Task from "./Task"
 
 const Tasks = ({tasks}) => {
     return (
         <>
             {tasks.map((task) => (
-                <h3 key={task.id}>{task.text}</h3>)
-            )}
+                //tasks is the array list containing the tasks
+                //map iterates through each task
+                //task={task} allows us to pass each task and its data to the Task component
+                <Task key={task.id} task={task}/>
+            ))}
         </>
     )
 }
